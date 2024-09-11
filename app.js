@@ -20,6 +20,14 @@ app.use(
   })
 );
 
+const corsOptions = {
+  origin: ['http://localhost:3000', 'https://frotend-hospital-management-system.vercel.app', 'https://dashboard-hospital-management-system.vercel.app', 'http://localhost:5173', 'http://localhost:5174'], // Allow only these origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+};
+
+app.use(cors(corsOptions));
+
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
