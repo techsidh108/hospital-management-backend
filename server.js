@@ -12,7 +12,7 @@ cloudinary.v2.config({
 config({ path: "./config.env" });
 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'https://frotend-hospital-management-system.vercel.app', 'https://dashboard-hospital-management-system.vercel.app', 'http://localhost:5173', 'http://localhost:5174'], // Allow only these origins
+  origin: ['http://localhost:5173', 'https://frotend-hospital-management-system.vercel.app', 'https://dashboard-hospital-management-system.vercel.app', 'http://localhost:5173', 'http://localhost:5174'], // Allow only these origins
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
   credentials: true, // Allow credentials (cookies, authorization headers, etc.)
 };
